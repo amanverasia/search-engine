@@ -1,4 +1,7 @@
 import requests
+import networkx as nx
+import json
+from tqdm import tqdm
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 
@@ -21,10 +24,16 @@ def get_all_links(url):
         links.append(absolute_url)
     return links
 
+seed_link = "http://www.facebook.com"
+crawled_links = set(get_all_links(seed_link))
 
-if __name__ == "__main__":
-    seed_link = "http://www.facebook.com"
-    crawled_links = set(get_all_links(seed_link))
-    with open('urls.txt','w') as fh:
-        fh.write('\n'.join(crawled_links))
-    print(crawled_links)
+master_links = {}
+count = 1
+for link in tqdm(crawled_links, desc="Processing"):
+    temp = list(set(get_all_links(link)))
+    master_links[link] = temp
+
+with open('master_links.json', 'w') as json_file:
+    json.dump(master_links, json_file, indent=2)
+
+print(master_links)
