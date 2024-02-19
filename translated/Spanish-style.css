@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px; 
+}
+
+header {
+    background-color: #336699; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.featured-article {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.featured-article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    padding: 8px 15px;
+    background-color: #336699;
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
