@@ -1,5 +1,0 @@
-files:
-  - source: /
-    ignore:
-      - /translated
-    translation: /translated/%language%-%original_file_name%
