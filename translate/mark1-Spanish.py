@@ -50,7 +50,7 @@ class WebCrawler:
 crawler = WebCrawler(seed_url='https://facebook.com')
 crawler.start_crawling()
 
-# In a real-world scenario, you would save the crawled data, index it, and implement a ranking algorithm.
+# En un escenario del mundo real, guardaría los datos cortados, lo indexaría e implementaría un algoritmo de clasificación.
 
 @app.route('/')
 def index():
